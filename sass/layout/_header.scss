@@ -22,11 +22,15 @@
         margin-right: 0.5em;
 
         a {
-            margin-left: 1em;
+            padding: 1em;
 
             i {
                 color: white;
             }
+        }
+
+        a:hover {
+            background-color: $color-primary;;
         }
     }
 }
@@ -38,7 +42,7 @@
 }
 
 .header {
-    @include center-content($padding: 1em 0em, $text-align: default);
+    @include center-content($padding: 0.5em 0em, $text-align: default);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,11 +78,67 @@
     }
 
     .menus {
+        display: flex;
+        align-items: stretch;
         margin-right: 0.5em;
+
+        &__item {
+            &.visible {
+                display: block;
+            }
+        }
+
         a {
-            padding-left: 0.5em;
+            padding: 1em 0.5em;
             text-decoration: none;
             color: white;
+        }
+
+        a:hover {
+            background-color: $color-primary;
+            border-bottom: 3px solid white;
+        }
+
+        a:active {
+            background-color: $color-primary;
+            border-bottom: 3px solid white;
+        }
+
+        /* Icon used to show menus on small screens */
+        .icon {
+            display: none;
+        }
+    }
+
+    @include medium-screens {
+        .logo {
+            &__name {
+                display: none;
+            }
+        }
+
+        .menus {
+            a {
+                display: none;
+    
+                &.icon {
+                    display: block;
+                }
+            }
+        }
+        
+
+        /* Styles à appliquer lorsque le bouton hamburger sera cliqué sur des écrans petits */
+        .responsive {
+            display: flex;
+            flex-direction: column-reverse  ;
+            width: 100%;
+
+            .menus {
+                a {
+                    display: block;
+                }
+            }
         }
     }
 }

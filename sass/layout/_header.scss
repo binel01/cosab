@@ -1,0 +1,84 @@
+.social-container {
+    width: 100%;
+    background-color: $color-secondary;
+}
+
+.social {
+    @include center-content(1em 0em);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+    &__references {
+        display: flex;
+        margin-left: 0.5em;
+        p {
+            margin-right: 0.5em;
+        }
+
+    }
+
+    &__icons {
+        margin-right: 0.5em;
+
+        a {
+            margin-left: 1em;
+
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+
+.header-container {
+    width: 100%;
+    background-color: $color-tertiary;
+}
+
+.header {
+    @include center-content($padding: 1em 0em, $text-align: default);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 0.5em;
+
+        &__image {
+            width: 3em;
+            height: 3em;
+            margin-right: 0.5em;
+        }
+
+        &__name {
+            margin: 0;
+            padding: 0;
+
+            h1 {
+                margin: 0;
+                padding: 0;
+                font-size: x-large;
+                font-family: $font-cairo;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .menus {
+        margin-right: 0.5em;
+        a {
+            padding-left: 0.5em;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

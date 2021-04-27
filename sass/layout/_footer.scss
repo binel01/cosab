@@ -1,0 +1,64 @@
+.footer-container {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.footer {
+    @include center-content($padding: 1em 0em, $text-align: default);
+    
+    &__elements {
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    &__adresse {
+        width: 33%;
+
+        h3 {
+            padding-top: 0em;
+        }
+        
+        p {
+            padding: 0.5em 0em;
+        }
+    }
+
+    &__formulaire {
+        width: 33%;
+        
+        h3 {
+            padding-top: 0em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .input {
+                padding: 0.5em 0.5em;
+                margin: 0.5em 0em;
+            }
+        }
+    }
+
+    @include medium-screens {
+        @include wide-content($padding: 1em 0em, $text-align: default);
+
+        &__adresse {
+            width: 45%;
+        }
+
+        &__formulaire {
+            width: 45%;
+        }
+    }
+}
+
+.copyright-container {
+    width: 100%;
+    background-color: $color-tertiary;
+
+    .copyright {
+        @include center-content($padding: 1em 0em);
+    }
+}

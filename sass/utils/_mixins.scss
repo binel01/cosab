@@ -1,0 +1,26 @@
+/* Center the content of the Section or Div */
+@mixin center-content($padding: 2em 0em, $text-align: center) {
+    width: 80%;
+    margin: 0 auto;
+    text-align: $text-align;
+    padding: $padding;
+}
+
+/* Enlarge the content of the page */
+@mixin wide-content($padding: 2em 0em, $text-align: center) {
+    width: 95%;
+    text-align: $text-align;
+    padding: $padding;
+}
+
+@mixin small-screens() {
+    @media screen and (max-width: 600px) {
+        @content
+    }
+}
+
+@mixin medium-screens() {
+    @media screen and (max-width: 1024px) {
+        @content
+    }
+}

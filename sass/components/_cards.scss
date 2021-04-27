@@ -1,0 +1,83 @@
+.atout {
+    width: 25%;
+    padding: 1em;
+    text-align: center;
+
+    &__text {
+        text-align: justify;
+    }
+
+    @include medium-screens {
+        width: 43%;
+        text-align: center;
+        padding: 1em;
+    }
+}
+
+.chiffre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__number {
+        font-size: 3em;
+        padding-bottom: 0em;
+    }
+
+    &__text {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include medium-screens {
+        &__number {
+            font-size: 2em;
+            padding: 0em;
+        }
+    }
+}
+
+
+.temoignage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 1em;
+    padding: 0em 0.5em 1em 0.5em;
+    margin: 2em 0em;
+
+    &__photo {
+        img {
+            margin-top: -2em;
+            height: 5em;
+            width: 5em;
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        padding: 0em 4em;
+
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+
+}
+
+.partenaire {
+    height: 6em;
+    width: 6em;
+
+    img {
+        height: 6em;
+        width: 6em;
+        border-radius: 50%;
+    }
+}

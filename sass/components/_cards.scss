@@ -10,9 +10,6 @@
         text-align: justify;
     }
 
-    &__image {
-    }
-
     &:hover {
         i {
             color: $color-primary;
@@ -26,6 +23,10 @@
         text-align: center;
         padding: 1em;
     }
+
+    @include small-screens {
+        width: 75%;
+    }
 }
 
 .chiffre {
@@ -33,10 +34,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1em;
+    border-radius: 1em;
 
     &__number {
         font-size: 3em;
-        padding-bottom: 0em;
+        padding: 0em;
     }
 
     &__text {
@@ -44,11 +47,22 @@
         margin: 0;
     }
 
+    &:hover {
+        color: white;
+        background-color: $color-primary;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
     @include medium-screens {
         &__number {
             font-size: 2em;
             padding: 0em;
         }
+    }
+
+    @include small-screens {
+        margin: 1em;
+        padding: 0.5em;
     }
 }
 
@@ -60,20 +74,20 @@
     align-items: center;
     background-color: lightgray;
     border-radius: 1em;
-    padding: 0em 0.5em 1em 0.5em;
     margin: 2em 0em;
+    width: 100%;
 
     &__photo {
         img {
             margin-top: -2em;
-            height: 5em;
-            width: 5em;
+            height: 6em;
+            width: 6em;
             border-radius: 50%;
         }
     }
 
     &__text {
-        padding: 0em 4em;
+        padding: 1em 4em;
 
         h3 {
             text-align: center;
@@ -88,6 +102,7 @@
 .partenaire {
     height: 6em;
     width: 6em;
+    margin: 1em;
 
     img {
         height: 6em;

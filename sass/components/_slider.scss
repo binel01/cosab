@@ -8,6 +8,12 @@
 
     .main-swiper-container {
         overflow: hidden;
+        position: relative;
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 2em;
+        }
     }
 
     .slide {
@@ -21,7 +27,7 @@
 
         &__text {
             position: absolute;
-            top: 22rem;
+            bottom: 5em;
             left: 25%;
             width: 50%;
             color: white;
@@ -30,7 +36,46 @@
         }
     }
 
-    
+    @include medium-screens {
+        .main-swiper-container {
+            overflow: hidden;
+        }
+
+        .slide {
+            &__image {
+                width: 100%;
+                height: auto;
+            }
+
+            &__text {
+                font-size: small;
+                left: 12.5%;
+                width: 75%;
+                color: white;
+                background-color: rgba($color: $color-secondary, $alpha: .6);
+                border-radius: 1em;
+            }
+        }
+
+    }
+
+    @include small-screens {
+        .slide {
+            &__image {
+                width: 100%;
+                height: auto;
+            }
+
+            &__text {
+                font-size: small;
+                bottom: 4em;
+                color: white;
+                background-color: rgba($color: $color-secondary, $alpha: .6);
+                border-radius: 1em;
+            }
+        }
+
+    }
 }
 
 .main-swiper-container {

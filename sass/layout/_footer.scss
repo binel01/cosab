@@ -52,6 +52,24 @@
             width: 45%;
         }
     }
+
+    @include small-screens {
+        @include wide-content($padding: 1em 0em, $text-align: default);
+        
+        &__elements {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__adresse {
+            width: 100%;
+        }
+
+        &__formulaire {
+            width: 100%;
+            margin-top: 2em;
+        }
+    }
 }
 
 .copyright-container {

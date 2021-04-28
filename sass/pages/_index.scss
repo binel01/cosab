@@ -23,12 +23,29 @@
 
         img {
             width: 25em;
+            border-radius: 0.5em;
         }
     }
 
     
     @include medium-screens {
         @include wide-content($padding: 1em 0em);
+
+        &__image {
+            img {
+                width: 10em;
+            }
+        }
+    }
+
+    @include small-screens {
+        display: flex;
+        flex-direction: column;
+
+        &__text {
+            padding: 0.5em;
+            text-align: justify;
+        }
 
         &__image {
             img {
@@ -57,6 +74,18 @@
         }
     
     }
+
+    @include small-screens {
+        @include wide-content($padding: 1em 0em);
+        display: flex;
+        flex-direction: column;
+
+        .atouts-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 .chiffres-container {
@@ -75,6 +104,16 @@
 
     @include medium-screens {
         @include wide-content($padding: 1em 0em);
+    }
+
+    @include small-screens {
+        @include wide-content(1em 0em);
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -103,5 +142,15 @@
 
     @include medium-screens {
         @include wide-content($padding: 1em 0em);
+    }
+
+    @include small-screens {
+        @include wide-content($padding: 1em 0em);
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

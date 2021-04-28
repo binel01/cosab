@@ -175,6 +175,9 @@ h1, h2, h3 {
     background-color: rgba(0, 128, 255, 0.6);
     border-radius: 1em;
   }
+  .main-slider .slide__text p {
+    display: none;
+  }
 }
 
 .main-swiper-container {

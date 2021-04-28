@@ -72,6 +72,10 @@
                 color: white;
                 background-color: rgba($color: $color-secondary, $alpha: .6);
                 border-radius: 1em;
+
+                p {
+                    display: none;
+                }
             }
         }
 

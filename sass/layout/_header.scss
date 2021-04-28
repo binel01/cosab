@@ -10,16 +10,13 @@
     color: white;
 
     &__references {
+        width: 55%;
         display: flex;
-        margin-left: 0.5em;
-        p {
-            margin-right: 0.5em;
-        }
-
+        justify-content: space-between;
     }
 
-    &__icons {
-        margin-right: 0.5em;
+    &__icons {  
+        display: flex;
 
         a {
             padding: 1em;
@@ -31,6 +28,16 @@
 
         a:hover {
             background-color: $color-primary;;
+        }
+    }
+
+    @include medium-screens {
+        @include wide-content(1em 0em);
+        
+        &__references {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
         }
     }
 }
@@ -111,6 +118,8 @@
     }
 
     @include medium-screens {
+        @include wide-content(1em 0em);
+
         .logo {
             &__name {
                 display: none;

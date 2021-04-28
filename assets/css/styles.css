@@ -210,10 +210,12 @@ h1, h2, h3 {
 .social__references {
   width: 55%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .social__icons {
   display: flex;
+  align-items: center;
 }
 .social__icons a {
   padding: 1em;

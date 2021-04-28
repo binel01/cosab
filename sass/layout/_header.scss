@@ -12,11 +12,13 @@
     &__references {
         width: 55%;
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
     &__icons {  
         display: flex;
+        align-items: center;
 
         a {
             padding: 1em;

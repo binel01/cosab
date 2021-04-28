@@ -16,9 +16,18 @@ h1, h2, h3 {
   width: 25%;
   padding: 1em;
   text-align: center;
+  border-radius: 1em;
+  margin-top: 2em;
+  transition: padding 0.5s;
 }
 .atout__text {
   text-align: justify;
+}
+.atout:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.atout:hover i {
+  color: #bf00ff;
 }
 @media screen and (max-width: 1024px) {
   .atout {
